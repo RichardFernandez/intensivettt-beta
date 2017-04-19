@@ -12,23 +12,3 @@
 */
 
 Route::get('/', 'InicioController@inicio');
-
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-/*Ejemplo de rutas*/
-
-Route::get('/contacto',function(){
-	return 'pagina de contacto';
-});
-
-Route::get('/contacto/{usuario}',function($usuario){
-    return 'segunda de contacto con usuario '.$usuario;
-});
-
-/*Con llamada al controlador*/
-
-Route::get('/contacto2', 'InicioController@inicio' );

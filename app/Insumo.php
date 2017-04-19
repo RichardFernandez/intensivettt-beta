@@ -11,6 +11,6 @@ class Insumo extends Model
     protected $fillable = ['medida', 'id_medida'];
 
     public function medida(){
-    	return $this->belongsTo('Intensivettt\Medida');
+    	return $this->belongsTo(Medida::class);
     }
 }

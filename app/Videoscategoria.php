@@ -11,6 +11,6 @@ class Videoscategoria extends Model
     protected $fillable = ['nombre_categoria'];
 
     public function videos(){
-    	return $this->hasMany('Intensivettt\video');
+    	return $this->hasMany(Video::class);
     }
 }

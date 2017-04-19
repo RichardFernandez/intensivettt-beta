@@ -11,6 +11,6 @@ class Marcas_suplemento extends Model
     protected $fillable = ['nombre_marca', 'imagen'];
 
     public function suplementos(){
-    	return $this-> hasMany('Intensivettt\Suplemento');
+    	return $this-> hasMany(Suplemento::class);
     }
 }

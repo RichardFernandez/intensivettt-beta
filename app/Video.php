@@ -11,6 +11,6 @@ class Video extends Model
     protected $fillable = ['nombre_video', 'url_video', 'id_categoria'];
 
     public function categoria(){
-    	return $this->belongsTo('Intensivettt\Videoscategoria');
+    	return $this->belongsTo(Videoscategoria::class);
     }
 }

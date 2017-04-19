@@ -11,6 +11,6 @@ class Medida extends Model
     protected $fillable = ['nombre_medida'];
 
     public function insumos(){
-    	return $this->hasMany('Intensivettt\Insumo');
+    	return $this->hasMany(Insumo::class);
     }
 }

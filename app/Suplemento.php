@@ -11,6 +11,6 @@ class Suplemento extends Model
      protected $fillable = ['nombre_suplemento', 'tipo_suplemento', 'presentacion', 'imagen', 'id_marca'];
 
      public function marca(){
-     	return $this->belongsTo('Intensivettt\Marcas_suplemento');
+     	return $this->belongsTo(Marcas_suplemeto::class);
      }
 }
