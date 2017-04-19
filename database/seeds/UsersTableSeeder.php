@@ -16,5 +16,7 @@ class UsersTableSeeder extends Seeder
                 'email' => 'mako_238@hotmail.com'
 
         	]);
+
+        //factory(Intensivettt\User::class, 10)->create();
     }
 }

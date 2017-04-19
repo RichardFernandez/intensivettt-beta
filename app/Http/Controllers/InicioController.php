@@ -3,18 +3,17 @@
 namespace Intensivettt\Http\Controllers;
 
 use Intensivettt\User;
+use Intensivettt\Medida;
 class InicioController Extends Controller
 {
 	public function inicio()
 	{
-		// $name = 'Ricardo';
 
-		// $user = User::find('all');
+		$users = User::all();
 
-		// $users = [
-		//   $user
-		// ];
 
- 		return view("home");
+ 		return view("home", ['users' => $users]);
+
+
 	}
 }

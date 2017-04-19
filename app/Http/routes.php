@@ -12,3 +12,12 @@
 */
 
 Route::get('/', 'InicioController@inicio');
+
+Route::get('insumos/{id}', 'InsumoController@show');
+
+Route::get('medida/{id}', [
+
+     'uses' => 'MedidaController@show',
+     'as' => 'medida_show_path',
+
+	]);

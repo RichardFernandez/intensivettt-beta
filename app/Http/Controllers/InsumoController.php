@@ -5,10 +5,18 @@ namespace Intensivettt\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Intensivettt\Http\Requests;
+use Intensivettt\Insumo;
 
 class InsumoController extends Controller
 {
-    public function inicio(){
+    public function index(){
     	
+    }
+
+    public function show($id){
+        
+        $insumo = Insumo::find($id);
+
+        return view('insumos', ['insumo' = $insumo]);	
     }
 }
