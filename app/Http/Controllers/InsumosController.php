@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Intensivettt\Http\Requests;
 use Intensivettt\Insumo;
 
-class InsumoController extends Controller
+class InsumosController extends Controller
 {
     public function index(){
     	

@@ -11,13 +11,23 @@
 |
 */
 
-Route::get('/', 'InicioController@inicio');
+/*RUTAS PARA EL BACKEND DE ADMINITRADORES*/
 
-Route::get('insumos/{id}', 'InsumoController@show');
+/*
+Grupo de rutas con el prefijo admin
+*/
+Route::group(['prefix' => 'admin'], function(){
 
-Route::get('medida/{id}', [
+	Route::resource('medidas','MedidasController');
+    // Route::resource('insumos','InsumosController');
+    // Route::resource('recetas','RecetasController');
 
-     'uses' => 'MedidaController@show',
-     'as' => 'medida_show_path',
+    // Route::resource('categorias-videos', 'CategoriavideosController');
+     
+});
 
-	]);
+
+//rutas del front end
+
+
+

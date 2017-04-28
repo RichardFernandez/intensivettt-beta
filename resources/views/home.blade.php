@@ -5,13 +5,13 @@
 
 {{-- {{$name}} --}}
 
-<h2>Estas son las medidas</h2>
+{{-- <h2>Estas son las medidas</h2>
 
 @foreach($users as $user)
 
      {{$user->name}}
 
-@endforeach
+@endforeach --}}
 
 @stop
 
