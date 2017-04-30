@@ -23,8 +23,8 @@
              <tr>
                  <td>{{ $medida->id }}</td>
                  <td>{{ $medida->nombre_medida }}</td>
-                 <td> <a href="" class="btn btn-warning">Editar</a></td>
-                 <td><a href="" class="btn btn-danger">X</a></td>
+                 <td> <a href="{{ route('admin.medidas.edit', $medida->id) }}" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                 <td><a href="{{ route('admin.medidas.destroy', $medida->id) }}" onclick="return confirm('Seguro que deseas eliminar este registro?')" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a></td>
              </tr>
          @endforeach 
          </tbody>

@@ -19,6 +19,13 @@ Grupo de rutas con el prefijo admin
 Route::group(['prefix' => 'admin'], function(){
 
 	Route::resource('medidas','MedidasController');
+
+	Route::get('medidas/{id}/destroy',[
+          'uses' => 'MedidasController@destroy',
+          'as' => 'admin.medidas.destroy'
+		]);
+
+	
     // Route::resource('insumos','InsumosController');
     // Route::resource('recetas','RecetasController');
 
