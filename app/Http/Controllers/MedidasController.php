@@ -9,7 +9,7 @@ use Intensivettt\Http\Requests;
 
 use Intensivettt\Medida;
 
-use Intensivettt\Http\Request\MedidaRequest
+//use Intensivettt\Http\Request\Request
 
 
 class MedidasController extends Controller
@@ -30,7 +30,7 @@ class MedidasController extends Controller
     }
 
     /*Metodo para insertar a la tabla de medidas*/
-    public function store(MedidaRequest $request)
+    public function store(Request $request)
     {
         //dd($request);
         $medida = new Medida($request->all());
@@ -53,7 +53,7 @@ class MedidasController extends Controller
        return view('admin.medidas.edit')->with('medida', $medida);
     }
 
-    public function update(MedidaRequest $request, $id)
+    public function update(Request $request, $id)
     {
          
 

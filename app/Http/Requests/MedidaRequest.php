@@ -24,7 +24,7 @@ class MedidaRequest extends Request
     public function rules()
     {
         return [
-            'nombre_medida' => 'min:2|max:40|required'
+            'nombre_medida' => 'min:2|max:40|required',
         ];
     }
 }
