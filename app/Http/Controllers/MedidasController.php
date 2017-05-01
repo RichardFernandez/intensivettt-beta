@@ -75,4 +75,5 @@ class MedidasController extends Controller
       flash('La medida ' . $medida->nombre_medida . ' se elimino exitosamente')->warning();
       return redirect()->route('admin.medidas.index');
     }
+    // final del controlador
 }
