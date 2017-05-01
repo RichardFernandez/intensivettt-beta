@@ -9,7 +9,11 @@ use Intensivettt\Http\Requests;
 
 use Intensivettt\Medida;
 
+<<<<<<< HEAD
 //use Intensivettt\Http\Request\MedidaRequest
+=======
+//use Intensivettt\Http\Request\Request
+>>>>>>> origin
 
 
 class MedidasController extends Controller
