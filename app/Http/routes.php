@@ -16,6 +16,10 @@
 /*
 Grupo de rutas con el prefijo admin
 */
+Route::get('/', function () {
+    return view('home');
+}); 
+
 Route::group(['prefix' => 'admin'], function(){
 
 	Route::resource('medidas','MedidasController');
@@ -26,10 +30,16 @@ Route::group(['prefix' => 'admin'], function(){
 		]);
 
 	
-    // Route::resource('insumos','InsumosController');
-    // Route::resource('recetas','RecetasController');
+    //Route::resource('insumos','InsumosController');
+    
+    //Route::resource('recetas','RecetasController');
 
-    // Route::resource('categorias-videos', 'CategoriavideosController');
+    Route::resource('catvideos','CategoriavideosController');
+
+    Route::get('catvideos/{id}/destroy',[
+          'uses' => 'Categoriavideoscontroller@destroy',
+          'as' => 'admin.catvideos.destroy'
+		]);
      
 });
 

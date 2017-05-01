@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Videoscategoria extends Model
 {
-    protected $table = "videoscategorias";
+    protected $table = "videosCategorias";
 
     protected $fillable = ['nombre_categoria'];
 

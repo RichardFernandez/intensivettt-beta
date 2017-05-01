@@ -19,14 +19,14 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATALOGOS <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{route('admin.medidas.create')}}">Medidas</a></li>
-            <li><a href="#">Insumos</a></li>
-            <li><a href="#">Recetas</a></li>
+            <li><a href="{{route('admin.medidas.index')}}">Medidas</a></li>
+            <li><a href="{{-- {{route('admin.insumos.index')}} --}}">Insumos</a></li>
+            <li><a href="{{-- {{route('admin.recetas.index')}} --}}">Recetas</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Categorias videos</a></li>
-            <li><a href="#">Videos</a></li>
+            <li><a href="{{route('admin.catvideos.index')}}">Categorias videos</a></li>
+            <li><a href="{{-- {{route('admin.videos.index')}} --}}">Videos</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="{{-- {{route('admin.marcas.index')}} --}}">Marcas de suplementos</a></li>
           </ul>
         </li>
       </ul>
