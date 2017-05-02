@@ -20,7 +20,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATALOGOS <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="{{route('admin.medidas.index')}}">Medidas</a></li>
-            <li><a href="{{-- {{route('admin.insumos.index')}} --}}">Insumos</a></li>
+            <li><a href="{{route('admin.insumos.index')}}">Insumos</a></li>
             <li><a href="{{-- {{route('admin.recetas.index')}} --}}">Recetas</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="{{route('admin.catvideos.index')}}">Categorias videos</a></li>
