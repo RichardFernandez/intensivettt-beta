@@ -13,4 +13,9 @@ class Videoscategoria extends Model
     public function videos(){
     	return $this->hasMany(Video::class);
     }
+
+    public function scopeSearch($query, $name)
+    {
+      return $query->where('nombre_categoria', 'LIKE', '%'.$name.'%');
+    }
 }

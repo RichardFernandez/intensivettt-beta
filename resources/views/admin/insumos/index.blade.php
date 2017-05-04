@@ -37,7 +37,7 @@
              <tr>
                  <td>{{ $insumo->id }}</td>
                  <td>{{ $insumo->nombre_insumo }}</td>
-                 <td>{{ $insumo->id_medida }}</td>
+                 <td>{{ $insumo->medida->nombre_medida }}</td>
                  <td> <a href="{{ route('admin.insumos.edit', $insumo->id) }}" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a></td>
                  <td><a href="{{ route('admin.insumos.destroy', $insumo->id) }}" onclick="return confirm('Seguro que deseas eliminar este registro?')" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a></td>
              </tr>

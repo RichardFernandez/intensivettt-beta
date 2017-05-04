@@ -11,8 +11,9 @@ class Insumo extends Model
     protected $fillable = ['nombre_insumo', 'id_medida'];
 
     public function medida(){
-    	return $this->belongsTo(Medida::class);
+    	return $this->belongsTo(Medida::class, 'id_medida');
     }
+
 
     public function scopeSearch($query, $name)
     {
