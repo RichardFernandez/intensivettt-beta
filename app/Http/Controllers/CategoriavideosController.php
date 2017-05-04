@@ -10,8 +10,8 @@ use Intensivettt\Videoscategoria;
 
 class CategoriavideosController extends Controller
 {
-    public function index(){
-    	$categorias = Videoscategoria::orderBy('id', 'DESC')->paginate(8);
+    public function index(Request $request){
+    	$categorias = Videoscategoria::Search($request->nombre_categoria)->orderBy('id', 'DESC')->paginate(8);
 
     	return view('admin.catvideos.index')->with('categorias', $categorias);
     }

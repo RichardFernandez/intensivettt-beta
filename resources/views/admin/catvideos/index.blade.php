@@ -6,6 +6,19 @@
      
     <a href="{{route('admin.catvideos.create')}}" class="btn btn-info">Registrar nueva categoria</a>
 
+    <!--Buscador de categorias-->
+
+        {!! Form::open(['route' => 'admin.catvideos.index', 'method' => 'GET', 'class' => 'navbar-form pull-right']) !!}
+
+           <div class="input-group">
+               
+               {!! Form::text('nombre_categoria', null, ['class' => 'form-control', 'placeholder' => 'Buscar Categoria....', 'aria-describedby' => 'search']) !!}
+               <span class="input-group-addon" id="search" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+           </div>
+
+        {!! Form::close() !!}
+        <hr>
+
      <!-- A partir de aqui empieza el despligue de los datos capturados -->
 
      <table class="table table-striped">

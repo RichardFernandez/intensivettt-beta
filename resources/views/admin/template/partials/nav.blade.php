@@ -26,7 +26,8 @@
             <li><a href="{{route('admin.catvideos.index')}}">Categorias videos</a></li>
             <li><a href="{{-- {{route('admin.videos.index')}} --}}">Videos</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="{{-- {{route('admin.marcas.index')}} --}}">Marcas de suplementos</a></li>
+            <li><a ref="#">Marcas de suplementos</a><li>
+            <li><a href="#">Suplementos </a></li>
           </ul>
         </li>
       </ul>
