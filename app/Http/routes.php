@@ -22,6 +22,8 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function(){
 
+  /*Tutas para el crud del catalogo de medidas*/
+
 	Route::resource('medidas','MedidasController');
 
 	Route::get('medidas/{id}/destroy',[
@@ -29,7 +31,7 @@ Route::group(['prefix' => 'admin'], function(){
           'as' => 'admin.medidas.destroy'
 		]);
 
-	
+	/*Rutas para el crud del catalogo de insumos*/
     Route::resource('insumos','InsumosController');
 
     Route::get('insumos/{id}/destroy',[
@@ -37,7 +39,7 @@ Route::group(['prefix' => 'admin'], function(){
           'as' => 'admin.insumos.destroy'
 		]);
     
-    //Route::resource('recetas','RecetasController');
+    /*Rutas para el catalogo de categorias de videos*/
 
     Route::resource('catvideos','CategoriavideosController');
 
@@ -45,7 +47,15 @@ Route::group(['prefix' => 'admin'], function(){
           'uses' => 'Categoriavideoscontroller@destroy',
           'as' => 'admin.catvideos.destroy'
 		]);
-     
+
+    /*Routas para el catalogo de videos*/
+    
+    Route::resource('videos', 'VideosController');
+    
+    Route::get('videos/{id}/destroy',[
+          'uses' => 'VideosController@destroy',
+          'as' => 'admin.videos.destroy'
+      ]);
 });
 
 
