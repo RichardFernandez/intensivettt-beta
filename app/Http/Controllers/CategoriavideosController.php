@@ -34,13 +34,6 @@ class CategoriavideosController extends Controller
     	return redirect()->route('admin.catvideos.index');
     }
 
-    /* */
-
-    public function show($id)
-    {
-
-    }
-
     /*Metodo para enviar a la vista de edicion de un registro en especifico*/
 
     public function edit($id)

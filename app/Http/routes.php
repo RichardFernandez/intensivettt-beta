@@ -22,7 +22,16 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function(){
 
-  /*Tutas para el crud del catalogo de medidas*/
+  /*Rutas para el catalogo de estados*/
+
+  Route::Resource('estados','EstadosController');
+
+  Route::get('estados/{id}/destroy', [
+         'uses' => 'EstadosController@destroy',
+         'as' => 'admin.estados.destroy'
+    ]);
+
+  /*Rutas para el crud del catalogo de medidas*/
 
 	Route::resource('medidas','MedidasController');
 

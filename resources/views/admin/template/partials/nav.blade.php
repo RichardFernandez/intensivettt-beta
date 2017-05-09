@@ -15,10 +15,20 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Panel de control <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Entrenadores</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PERSONAL <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Administradores</a></li>
+            <li><a href="#">Asistentes</a></li>
+            <li><a href="#">Entrenadores</a></li>
+
+          </ul>
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATALOGOS <span class="caret"></span></a>
           <ul class="dropdown-menu">
+            <li><a href="{{route('admin.estados.index')}}">Estados de la República</a></li>
+            <li role="separator" class="divider"></li>
             <li><a href="{{route('admin.medidas.index')}}">Medidas</a></li>
             <li><a href="{{route('admin.insumos.index')}}">Insumos</a></li>
             <li><a href="{{-- {{route('admin.recetas.index')}} --}}">Recetas</a></li>
@@ -27,7 +37,7 @@
             <li><a href="{{route('admin.videos.index')}}">Videos</a></li>
             <li role="separator" class="divider"></li>
             <li><a ref="#">Marcas de suplementos</a><li>
-            <li><a href="#">Suplementos </a></li>
+            <li><a href="#">Suplementos</a></li>
           </ul>
         </li>
       </ul>
