@@ -20,11 +20,22 @@ Route::get('/', function () {
     return view('home');
 }); 
 
+/*Ajutentificacion a la administracion */
+
+// Route::get('admin', [
+//    'uses' => 'AdminController@index',
+//    'as' => 'login_display'
+//   ]);
+
 Route::group(['prefix' => 'admin'], function(){
+
+  /*Rutas para el catalogo de administradores*/
+
+  Route::resource('admins', 'AdminsController');
 
   /*Rutas para el catalogo de estados*/
 
-  Route::Resource('estados','EstadosController');
+  Route::resource('estados','EstadosController');
 
   Route::get('estados/{id}/destroy', [
          'uses' => 'EstadosController@destroy',
@@ -57,13 +68,22 @@ Route::group(['prefix' => 'admin'], function(){
           'as' => 'admin.catvideos.destroy'
 		]);
 
-    /*Routas para el catalogo de videos*/
+    /*Rutas para el catalogo de videos*/
     
     Route::resource('videos', 'VideosController');
     
     Route::get('videos/{id}/destroy',[
           'uses' => 'VideosController@destroy',
           'as' => 'admin.videos.destroy'
+      ]);
+
+    /*Rutas para las categorias de los suplementos*/
+
+    Route::resource('catsuplementos', 'CatsuplementosController');
+
+    Route::get('catsuplementos/{id}/destroy', [
+         'uses' => 'CatsuplementosController@destroy',
+         'as' => 'admin.catsuplementos.destroy'
       ]);
 });
 

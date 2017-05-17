@@ -8,5 +8,10 @@ use Intensivettt\Http\Requests;
 
 class AdminController extends Controller
 {
+
+	public function index()
+	{
+		
+	}
     
 }

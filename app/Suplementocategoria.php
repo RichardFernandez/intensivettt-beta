@@ -4,7 +4,7 @@ namespace Intensivettt;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Marcas_suplemento extends Model
+class Suplementocategoria extends Model
 {
     protected $table = "marcas_suplementos";
 
@@ -12,5 +12,10 @@ class Marcas_suplemento extends Model
 
     public function suplementos(){
     	return $this-> hasMany(Suplemento::class);
+    }
+
+    public function scopeSearch($query, $name)
+    {
+    	return $query->where('nombre_marca', 'LIKE', '%'.$name.'%');
     }
 }
