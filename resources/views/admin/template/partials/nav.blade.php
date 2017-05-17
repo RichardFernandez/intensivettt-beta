@@ -37,7 +37,7 @@
             <li><a href="{{route('admin.videos.index')}}">Videos</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="{{ route('admin.catsuplementos.index') }}">Marcas de suplementos</a><li>
-            <li><a href="#">Suplementos</a></li>
+            <li><a href="{{ route('admin.suplementos.index') }}">Suplementos</a></li>
           </ul>
         </li>
       </ul>

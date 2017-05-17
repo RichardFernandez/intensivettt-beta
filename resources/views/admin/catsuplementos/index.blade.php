@@ -27,7 +27,7 @@
              <tr>
                  <th>No.</th>
                  <th>Nombre de marca</th>
-                 <th>Imagen</th>
+                 <th>Logo</th>
                  <th>Editar</th>
                  <th>Eliminar</th>
              </tr>

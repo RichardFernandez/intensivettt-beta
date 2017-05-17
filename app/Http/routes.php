@@ -85,6 +85,14 @@ Route::group(['prefix' => 'admin'], function(){
          'uses' => 'CatsuplementosController@destroy',
          'as' => 'admin.catsuplementos.destroy'
       ]);
+
+    /*Rutas para los suplementos*/
+    Route::resource('suplementos', 'SuplementosController');
+
+    Route::get('suplementos/{id}/destroy', [
+      'uses' => 'SuplementosController@destroy',
+      'as' => 'admin.suplementos.destroy'
+      ]);
 });
 
 

@@ -54,7 +54,7 @@ class CatsuplementosController extends Controller
     public function update(Request $request, $id)
     {
     	$categoria = Suplementocategoria::find($id);
-    	$categoria->nombre_marca = $request->nombre_marca;
+    	$categoria->fill($request->all());
     	$categoria->save();
        
         flash("Editaste con éxito la categoria")->warning();
