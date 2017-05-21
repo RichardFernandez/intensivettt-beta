@@ -1,0 +1,21 @@
+#header-container .container-fluid{
+	background: #001c27;
+}
+#header-container .container-fluid a{
+	color: white;
+	font-size: 16px;
+}
+
+#header-container .container-fluid a:hover, #header-container .container-fluid a:visited, #header-container .container-fluid a:active{
+	background: #002c55;
+}
+
+#header-container .container-fluid ul li ul{
+	background: #001c27;
+}
+
+footer{
+	background: #001c27 !important;
+	color: white;
+	padding: 10px;
+}
