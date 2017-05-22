@@ -14,7 +14,7 @@
 
      <div class="form-group">
             {!! Form::label('tipo_suplemento', 'Tipo de suplemento') !!}
-            {!! Form::select('tipo_suplemento', ['Proteina' => 'Proteina', 'multivitaminico' => 'Multivitaminico', 'termogenico' => 'Termogénico', 'pre-entrenamiento' => 'Pre-entrenamiento', 'l-carnitina' => 'L-Carnitina'], null, ['class' => 'form-control', 'placeholder' => 'Selecciona el tipo', 'required']) !!}
+            {!! Form::select('tipo_suplemento', ['Proteina' => 'Proteina', 'multivitaminico' => 'Multivitaminico', 'termogenico' => 'Termogénico', 'pre-entrenamiento' => 'Pre-entrenamiento', 'l-carnitina' => 'L-Carnitina', 'glutamina' => 'Glutamina', 'creatina' => 'Creatina', 'aminoacidos' => 'Aminoacidos', 'complejo-b' => 'Complejo B', 'vitamina-c' => 'Vitamina C', 'CLA' => 'CLA', 'calcio' => 'Calcio', 'potasio' => 'Potasio'], null, ['class' => 'form-control', 'placeholder' => 'Selecciona el tipo', 'required']) !!}
      </div> 
 
      <div class="form-group">
