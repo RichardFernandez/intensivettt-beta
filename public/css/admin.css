@@ -1,17 +1,24 @@
-#header-container .container-fluid{
+.bg-faded{
 	background: #001c27;
 }
-#header-container .container-fluid a{
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .active > .nav-link{
 	color: white;
 	font-size: 16px;
 }
 
-#header-container .container-fluid a:hover, #header-container .container-fluid a:visited, #header-container .container-fluid a:active{
+.navbar-nav a:hover, 
+.navbar-nav a:visited, 
+.navbar-nav a:active{
 	background: #002c55;
 }
 
-#header-container .container-fluid ul li ul{
+.navbar-nav li div {
 	background: #001c27;
+}
+
+.navbar-nav li div a{
+	color: white;
 }
 
 footer{

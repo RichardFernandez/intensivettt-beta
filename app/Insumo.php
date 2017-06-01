@@ -14,6 +14,10 @@ class Insumo extends Model
     	return $this->belongsTo(Medida::class, 'id_medida');
     }
 
+    public function recetas(){
+    	return $this->belongsToMany(Receta::class, 'id_receta');
+    }
+
 
     public function scopeSearch($query, $name)
     {

@@ -58,6 +58,15 @@ Route::group(['prefix' => 'admin'], function(){
           'uses' => 'InsumosController@destroy',
           'as' => 'admin.insumos.destroy'
 		]);
+
+    /*Rutas para el catalogo de recetas*/
+
+    Route::resource('recetas', 'RecetasController');
+
+    Route::get('recetas/{id}/destroy', [
+         'uses' => 'RecetasController@destroy', 
+         'as' => 'admin.recetas.destroy'
+      ]);
     
     /*Rutas para el catalogo de categorias de videos*/
 
