@@ -7,32 +7,30 @@ body{
 	background: linear-gradient(to bottom,  #001d27 0%,#0a4f5a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001d27', endColorstr='#0a4f5a',GradientType=0 ); /* IE6-9 */
 	color: #cfcfcd;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+    font-weight: 100;
+    /*font-family: 'Lato';*/
 }
+            
 
 .row{
 	margin-top: 20px;
 }
-
-.navbar{
-	margin-bottom: 0;
+/*Estilos para la navegacion*/
+.navbar-brand img{
+   width:90%;
 }
 
-.navbar-default{
-	background-color: transparent;
-	border-radius: 0;
-	border:none;
+.navbar-toggleable-md .navbar-collapse{
+	width: auto;
+	margin-top: 10px;
 }
-
-.navbar-brand {
-	padding: 5px 15px;
-}
-
-.navbar-default .navbar-nav > li > a{
-    color: white;
-}
-
-.navbar-default .navbar-nav > li > a:hover{
-    color: #cfcfcd;
+.navbar-nav .nav-link{
+	color:white;
 }
 
 .btn-in{
@@ -55,6 +53,41 @@ body{
 	margin: 5px 10px;
 	color: white;
 }
+.fa-bars{
+	color: white;
+}
+
+/*Estilos para el home*/
+#carousel-container{
+	width: 97vw;
+}
+
+#galeriaPrincipal .carousel-inner img{
+	width: 100%;
+	margin: 0 auto;
+}
+
+/*Estilos para el area de proceso de la app*/
+
+.funcionamiento{
+	background: #218597;
+	border-radius: 50%;
+	padding:30px;
+	
+}
+.proceso-registro h4{
+	margin: 10px 0;
+}
+
+.testimonios img{
+	margin: 0 auto;
+}
+
+.videos{
+	background: #004a58;
+	padding: 20px 0;
+}
+/*fin de estilos del home*/
 
 /*Estilos para el subfooter*/
 .subfooter{
@@ -62,7 +95,7 @@ body{
 	padding: 10px 20px;
 }
 
-.subfooter h3{
+.subfooter h4{
 	border-bottom: 1px solid #ced1cc;
 	padding-bottom: 10px;
 }

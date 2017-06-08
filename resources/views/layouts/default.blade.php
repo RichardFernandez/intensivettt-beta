@@ -4,10 +4,13 @@
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>@yield('title', 'INTENSIVETTT, Entrenamientos en linea')</title>
-		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+		<link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="{{ asset('libs/fa/css/font-awesome.css') }}">
 		<link rel="stylesheet" href="{{ asset('libs/bootstrap/css/bootstrap.css') }}">
 		<link rel="stylesheet" href="{{ asset('libs/bootstrap/css/bootstrap-flexmin.css') }}">
-		<link rel="stylesheet" href="/css/intensivettt.css">
+		<link rel="stylesheet" href="{{ asset('css/intensivettt.css') }}">
+		@yield('css')
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -18,15 +21,15 @@
 		  ga('send', 'pageview');
 
 		</script>
-		@yield('css')
+		
 	</head>
 	<body>
 
 	    @include('layouts.front-partials.nav')
 
 	    <div class="container-fluid"> 
-		@yield('content')
-       </div>
+		  @yield('content')
+        </div>
 
         @include('layouts.front-partials.subfooter')
 

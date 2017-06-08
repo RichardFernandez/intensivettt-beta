@@ -1,29 +1,26 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+<nav class="navbar navbar-toggleable-md  ">
+  
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+    
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#front-nav" aria-controls="front-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
       </button>
       <a class="navbar-brand" href="intensivettt.app"><img src="/images/logo-intensivettt.png" alt="logo intensivettt"></a>
-    </div>
-
+   
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li><a href="#">Ideología Intensivettt</a></li>
-            <li><a href="#">Planes</a></li>
-            <li><a href="#">Entrenadores</a></li>
-            <li><a href="#">Blog fitness</a></li>
+    <div class="collapse navbar-collapse" id="front-nav">
+        <div class="navbar-nav nav justify-content-right">
+            <a href="{{ url('/') }}" class="nav-item nav-link active">Inicio</a>
+            <a href="{{ url('/ideologia-intensivettt') }}" class="nav-item nav-link">Ideología Intensivettt <span class="sr-only">(current)</span></a>
+            <a href="#" class="nav-item nav-link">Planes</a>
+            <a href="#" class="nav-item nav-link">Entrenadores</a>
+            <a href="#" class="nav-item nav-link">Blog fitness</a>
 
-        </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="btn-in"><a href="#" >Regístrarme</a></li>
-        <li class="btn-in"><a href="#" >Iniciar sesión</a></li>
-      </ul>
+        </div>
+      <div class="navbar-nav justify-content-right">
+        <a href="#" class="nav-item nav-link btn-in">Regístrarme</a>
+        <a href="#" class="nav-item nav-link btn-in">Iniciar sesión</a>
+      </div>
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid --> 
+  
 </nav>

@@ -5,6 +5,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>@yield('title', 'INTENSIVETTT')</title>
 		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="{{ asset('libs/fa/css/font-awesome.css') }}">
 		<link rel="stylesheet" href="{{ asset('libs/bootstrap/css/bootstrap.css')}}">
 		<link rel="stylesheet" href="{{ asset('libs/chosen/chosen.css') }}">
 		<link rel="stylesheet" href="/css/admin.css">

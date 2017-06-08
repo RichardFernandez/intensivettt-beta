@@ -13,12 +13,17 @@
 
 /*RUTAS PARA EL BACKEND DE ADMINITRADORES*/
 
-/*
-Grupo de rutas con el prefijo admin
-*/
 Route::get('/', function () {
     return view('home');
 }); 
+
+Route::get('/ideologia-intensivettt', function(){
+  return view('ideologia-intensivettt');
+});
+
+/*
+Grupo de rutas con el prefijo admin
+*/
 
 /*Ajutentificacion a la administracion */
 

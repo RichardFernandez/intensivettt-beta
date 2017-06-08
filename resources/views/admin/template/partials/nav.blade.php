@@ -1,7 +1,7 @@
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
   </button>
 
   <a class="navbar-brand" href="https://www.intensivettt.com"><img src="/images/logo-intensivettt.png" alt="logo intensivettt"></a>

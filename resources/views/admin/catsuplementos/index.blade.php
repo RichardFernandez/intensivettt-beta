@@ -8,12 +8,12 @@
 
      <!--Buscador de categorias-->
 
-        {!! Form::open(['route' => 'admin.catsuplementos.index', 'method' => 'GET', 'class' => 'navbar-form pull-right']) !!}
+        {!! Form::open(['route' => 'admin.catsuplementos.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) !!}
 
            <div class="input-group">
                
-               {!! Form::text('nombre_marca', null, ['class' => 'form-control', 'placeholder' => 'Buscar Categoria....', 'aria-describedby' => 'search']) !!}
-               <span class="input-group-addon" id="search" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+               {!! Form::text('nombre_marca', null, ['class' => 'form-control mr-sm-2', 'placeholder' => 'Buscar Categoria....']) !!}
+               <button class="btn btn-info my-2 my-sm-0" type="submit">BUSCAR</button>
            </div>
 
         {!! Form::close() !!}
@@ -21,8 +21,7 @@
 
      <!-- A partir de aqui empieza el despligue de los datos capturados -->
 
-     <table class="table table-striped">
-         <caption>Lista de medidas registradas</caption>
+     <table class="table thead-inverse table-striped">
          <thead>
              <tr>
                  <th>No.</th>
@@ -38,8 +37,8 @@
                  <td>{{ $categoria->id }}</td>
                  <td>{{ $categoria->nombre_marca }}</td>
                  <td><img src="{{ '/images/catsuplementos/'.$categoria->imagen }}" width="50"></td>
-                 <td> <a href="{{ route('admin.catsuplementos.edit', $categoria->id) }}" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a></td>
-                 <td><a href="{{ route('admin.catsuplementos.destroy', $categoria->id) }}" onclick="return confirm('Seguro que deseas eliminar este registro?')" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a></td>
+                 <td> <a href="{{ route('admin.catsuplementos.edit', $categoria->id) }}" class="btn btn-warning"><span ><i class="fa fa-pencil"></i></span></a></td>
+                 <td><a href="{{ route('admin.catsuplementos.destroy', $categoria->id) }}" onclick="return confirm('Seguro que deseas eliminar este registro?')" class="btn btn-danger"><span><i class="fa fa-times"></i></span></a></td>
              </tr>
          @endforeach 
          </tbody>
