@@ -38,13 +38,13 @@
     </div>
   </div>   {{-- Final del carrousel --}}
 
-  <div class="flecha-abajo">
+  {{-- <div class="flecha-abajo">
   	<a href="#">hacia abajo</a>
-  </div>
+  </div> --}}
 
   {{-- inicia la seccion para el proceso de registro --}}
 
-  <div class="proceso-registro">
+  <div class="proceso-registro container-fluid">
     <div class="row text-xs-center">
 	  <div class="col-xs-12 text-xs-center">
 	  	<h2>¿COMO FUNCIONA?</h2>
@@ -90,7 +90,7 @@
 
   {{-- seccion de testimonios --}}
 
-  <div class="testimonios">
+  <div class="testimonios container-fluid">
     <div class="row text-xs-center">
     	<div class="col-xs-12">
     		<h2>TESTIMONIOS</h2>
@@ -137,7 +137,7 @@ con INTESIVETTT.</p>
   <hr/>
 
   {{-- seccion de videos --}}
-  <div class="videos">
+  <div class="videos w-100 p-3">
   	<div class="row text-xs-center">
   		<div class="col-xs-12">
   			<h2>ASI TE ENTRENAMOS</h2>

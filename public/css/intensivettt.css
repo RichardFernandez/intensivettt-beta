@@ -7,16 +7,11 @@ body{
 	background: linear-gradient(to bottom,  #001d27 0%,#0a4f5a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001d27', endColorstr='#0a4f5a',GradientType=0 ); /* IE6-9 */
 	color: #cfcfcd;
-
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: table;
-    font-weight: 100;
     /*font-family: 'Lato';*/
+
+	
 }
             
-
 .row{
 	margin-top: 20px;
 }
@@ -58,13 +53,16 @@ body{
 }
 
 /*Estilos para el home*/
+
 #carousel-container{
-	width: 97vw;
+	margin: 0;
+	padding: 0;
 }
 
 #galeriaPrincipal .carousel-inner img{
 	width: 100%;
 	margin: 0 auto;
+
 }
 
 /*Estilos para el area de proceso de la app*/
@@ -75,6 +73,7 @@ body{
 	padding:30px;
 	
 }
+
 .proceso-registro h4{
 	margin: 10px 0;
 }
@@ -107,7 +106,62 @@ body{
 .subfooter a{
 	color:#ced1cc;
 }
+
+/*Estilos para pagina de planes*/
+.encabezado-planes{
+	background: url(/images/header-planes.jpg);
+	height: 350px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+#informacion{
+	background: #ced1cc;
+	color: #001921;
+	padding: 10px;
+	margin-bottom: 20px;
+	margin-top: 270px;
+	width: 100%;
+}
+
+.requisitos-informacion{
+	list-style: none;
+}
+
+.card-block{
+	padding: 0;
+}
+
+.titulo-azul{
+	background: #608BB4;
+	color: white;
+	font-size: 20px;
+	padding: 20px;
+	border-top-right-radius: .25rem;
+    border-top-left-radius: .25rem;
+    margin-bottom: 0;
+    box-sizing: content-box;
+}
+.subtitulo-azul{
+	background: #73A3D4;
+	color: white;
+	font-size: 25px;
+	font-weight: 600;
+	padding: 20px;
+}
+.list-group{
+	color:#666;
+}
+.list-group, .boton-card{
+	padding: 15px;
+}
+/*Estilos de footer*/
+
 footer{
+	padding: 10px 0;
 	background: #001c27 !important;
 	color: white;
 }

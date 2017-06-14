@@ -21,6 +21,10 @@ Route::get('/ideologia-intensivettt', function(){
   return view('ideologia-intensivettt');
 });
 
+Route::get('/planes', function(){
+  return view('planes');
+});
+
 /*
 Grupo de rutas con el prefijo admin
 */

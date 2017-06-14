@@ -9,15 +9,15 @@
    
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="front-nav">
-        <div class="navbar-nav nav justify-content-right">
+        <div class="navbar-nav nav">
             <a href="{{ url('/') }}" class="nav-item nav-link active">Inicio</a>
             <a href="{{ url('/ideologia-intensivettt') }}" class="nav-item nav-link">Ideología Intensivettt <span class="sr-only">(current)</span></a>
-            <a href="#" class="nav-item nav-link">Planes</a>
+            <a href="{{ url('/planes') }}" class="nav-item nav-link">Planes</a>
             <a href="#" class="nav-item nav-link">Entrenadores</a>
             <a href="#" class="nav-item nav-link">Blog fitness</a>
 
         </div>
-      <div class="navbar-nav justify-content-right">
+      <div class="navbar-nav text-md-right">
         <a href="#" class="nav-item nav-link btn-in">Regístrarme</a>
         <a href="#" class="nav-item nav-link btn-in">Iniciar sesión</a>
       </div>

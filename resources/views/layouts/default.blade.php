@@ -27,7 +27,7 @@
 
 	    @include('layouts.front-partials.nav')
 
-	    <div class="container-fluid"> 
+	    <div class="wrap"> 
 		  @yield('content')
         </div>
 
