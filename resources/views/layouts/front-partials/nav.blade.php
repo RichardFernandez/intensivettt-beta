@@ -17,7 +17,7 @@
             <a href="#" class="nav-item nav-link">Blog fitness</a>
 
         </div>
-      <div class="navbar-nav text-md-right">
+      <div class="navbar-nav  ml-auto">
         <a href="#" class="nav-item nav-link btn-in">Regístrarme</a>
         <a href="#" class="nav-item nav-link btn-in">Iniciar sesión</a>
       </div>

@@ -19,6 +19,7 @@
      {!! Form::open(['route' => 'admin.medidas.store', 'method' => 'POST']) !!}
 
      <div class="form-group">
+       {{ csrf_field() }}
 
        {!! Form::label('nombre_medida', 'Nombre de medida') !!}
        {!! Form::text('nombre_medida', null, ['class' => 'form-control', 'placeholder' => 'Nombre de la medida', 'required']) !!}

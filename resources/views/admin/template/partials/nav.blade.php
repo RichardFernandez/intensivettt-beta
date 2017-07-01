@@ -9,6 +9,9 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
             <li class=" nav-item active"><a class="nav-link" href="#">Panel de control <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item">
+              <a href="" class="nav-link">CLIENTES</a>
+            </li>
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PERSONAL</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

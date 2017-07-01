@@ -23,10 +23,10 @@
                  <td>{{ $medida->id }}</td>
                  <td>{{ $medida->nombre_medida }}</td>
                  <td> <a href="{{ route('admin.medidas.edit', $medida->id) }}" class="btn btn-warning"><span ><i class="fa fa-pencil"></i></span></a></td>
-                 <td><a href="{{ route('admin.medidas.destroy', $medida->id) }}" onclick="return confirm('Seguro que deseas eliminar este registro?')" class="btn btn-danger"><span><i class="fa fa-times"></i></span></a></td>
+                 <td><a href="{{ route('admin.medidas.destroy', $medida->id) }}" class="btn btn-danger" onclick="return confirm('Seguro que deseas eliminar este registrooo?')"><span><i class="fa fa-times"></i></span></a></td>
              </tr>
          @endforeach 
          </tbody>
      </table>
-     {!! $medidas->render() !!}
+     {!! $medidas->links() !!}
 @stop

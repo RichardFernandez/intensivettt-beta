@@ -30,7 +30,9 @@ class MedidasController extends Controller
     /*Metodo para insertar a la tabla de medidas*/
     public function store(Request $request)
     {
-        //dd($request);
+        $this->validate($request,[
+            'nombre_medida' => ['required', 'max:30']
+          ]);
         $medida = new Medida($request->all());
         $medida->save();
 
