@@ -12,13 +12,11 @@
             <li class="nav-item">
               <a href="" class="nav-link">CLIENTES</a>
             </li>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PERSONAL</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                 <a class="dropdown-item" href="#">Administradores</a>      
-                 <a class="dropdown-item" href="#">Asistentes</a>      
-                 <a class="dropdown-item" href="#">Entrenadores</a>      
-              </div>
+            <li class="nav-item">
+              <a href="" class="nav-link">ENTRENADORES</a>
+            </li>
+            <li>
+              <a href="" class="nav-link">PERSONAL</a>
             </li>
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CATALOGOS</a>
@@ -36,19 +34,16 @@
                 <a class="dropdown-item" href="{{ route('admin.suplementos.index') }}">Suplementos</a>
               </div>
             </li>
-          </ul>
-          <ul class="navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Mi cuenta</a></li>
-                <li><a href="#">Pagos</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Cerrar Sesión</a></li>
-              </ul>
-            </li>
-          </ul>
+      </ul>
+        <ul class="navbar-nav ml-auto">      
+          <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MI CUENTA </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Mi perfil</a>
+                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+              </div>
+          </li>
+        </ul>
   </div>
 </nav>
 
