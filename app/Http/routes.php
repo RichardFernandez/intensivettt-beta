@@ -116,6 +116,14 @@ Route::group(['prefix' => 'admin'], function(){
       'uses' => 'SuplementosController@destroy',
       'as' => 'admin.suplementos.destroy'
       ]);
+
+    /*Rutas para crear frases motivadoras*/
+    Route::resource('frases', 'FrasesController');
+
+    Route::get('frases/{id}/destroy', [
+        'uses' => 'FrasesController@destroy',
+        'as' => 'admin.frases.destroy'
+      ]);
 });
 
 

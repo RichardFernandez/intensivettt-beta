@@ -1,6 +1,10 @@
 .bg-faded{
 	background: #001c27;
 }
+#header-container{
+	margin-bottom: 15px;
+}
+
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-nav .active > .nav-link{
 	color: white;

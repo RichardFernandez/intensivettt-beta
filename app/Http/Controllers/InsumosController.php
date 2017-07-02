@@ -37,11 +37,6 @@ class InsumosController extends Controller
          return redirect()->route('admin.insumos.index');
     }
 
-    public function show($id){
-        
-        
-    }
-
     public function edit($id)
     {
       $insumo = Insumo::find($id);

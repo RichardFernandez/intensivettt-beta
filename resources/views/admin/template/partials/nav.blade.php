@@ -32,6 +32,7 @@
                 {{-- <li role="separator" class="divider"></li> --}}
                 <a class="dropdown-item" href="{{ route('admin.catsuplementos.index') }}">Marcas de suplementos</a>
                 <a class="dropdown-item" href="{{ route('admin.suplementos.index') }}">Suplementos</a>
+                <a class="dropdown-item" href="{{ route('admin.frases.index') }}">Frases</a>
               </div>
             </li>
       </ul>
