@@ -4,6 +4,21 @@
 @section('content')
 
   <div class="frases-container">
+
+  <div class="buscador-container">
+
+
+        {{ Form::open(['route' => 'admin.frases.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) }}
+
+           <div class="input-group">
+               
+               {{ Form::text('frase', null, ['class' => 'form-control mr-sm-2', 'placeholder' => 'Frase....']) }}
+               <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar frase</button>
+           </div>
+
+        {!! Form::close() !!}
+  	
+  </div>
    
    <div class="boton-container">
    	 <a href="{{ route('admin.frases.create') }}" class="btn btn-info">Registrar nueva frase</a>
