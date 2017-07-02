@@ -40,7 +40,12 @@ Route::group(['prefix' => 'admin'], function(){
 
   /*Rutas para el catalogo de administradores*/
 
-  Route::resource('admins', 'AdminsController');
+  Route::resource('empleados', 'EmpleadosController');
+
+  Route::get('empleados/{id}/destroy', [
+      'uses' => 'EmpleadosController@destroy',
+      'as' => 'admin.empleados.destroy'
+    ]);
 
   /*Rutas para el catalogo de estados*/
 

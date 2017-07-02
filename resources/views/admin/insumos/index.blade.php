@@ -13,7 +13,7 @@
            <div class="input-group">
                
                {!! Form::text('nombre_insumo', null, ['class' => 'form-control mr-sm-2', 'placeholder' => 'Buscar insumo....']) !!}
-               <button class="btn btn-info my-2 my-sm-0" type="submit">BUSCAR</button>
+               <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar insumo</button>
            </div>
 
         {!! Form::close() !!}

@@ -16,7 +16,7 @@
               <a href="" class="nav-link">ENTRENADORES</a>
             </li>
             <li>
-              <a href="" class="nav-link">PERSONAL</a>
+              <a href="{{route('admin.empleados.index')}}" class="nav-link">PERSONAL</a>
             </li>
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CATALOGOS</a>
