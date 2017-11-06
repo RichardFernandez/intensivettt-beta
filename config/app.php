@@ -159,7 +159,6 @@ return [
         /*  mis propios providers*/
 
         Collective\Html\HtmlServiceProvider::class,
-        Cviebrock\EloquentSluggable\ServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
 
     ],
