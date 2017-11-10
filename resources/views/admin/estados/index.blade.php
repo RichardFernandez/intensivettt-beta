@@ -4,11 +4,11 @@
 
 @section('content')
      
-    <a href="{{route('admin.estados.create')}}" class="btn btn-info">Registrar nuevo estado</a>
+    <a href="{{route('estados.create')}}" class="btn btn-info">Registrar nuevo estado</a>
 
     <!--Buscador de estados-->
 
-        {!! Form::open(['route' => 'admin.estados.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) !!}
+        {!! Form::open(['route' => 'estados.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) !!}
 
            <div class="input-group">
                
@@ -35,8 +35,8 @@
              <tr>
                  <td>{{ $estado->id }}</td>
                  <td>{{ $estado->nombre_estado }}</td>
-                 <td> <a href="{{ route('admin.estados.edit', $estado->id) }}" class="btn btn-warning"><span><i class="fa fa-pencil"></i></span></a></td>
-                 <td><a href="{{ route('admin.estados.destroy', $estado->id) }}" onclick="return confirm('Seguro que deseas eliminar este registro?')" class="btn btn-danger"><span><i class="fa fa-times"></i></span></a></td>
+                 <td> <a href="{{ route('estados.edit', $estado->id) }}" class="btn btn-warning"><span><i class="fa fa-pencil"></i></span></a></td>
+                 <td><a href="{{ route('estados.destroy', $estado->id) }}" onclick="return confirm('Seguro que deseas eliminar este registro?')" class="btn btn-danger"><span><i class="fa fa-times"></i></span></a></td>
              </tr>
          @endforeach 
          </tbody>

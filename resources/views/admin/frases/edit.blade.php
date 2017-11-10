@@ -6,7 +6,7 @@
 
   <div class="form-frases-edit-container">
 
-     {{ Form::open(['route' => ['admin.frases.update', $frase->id], 'method' => 'PUT']) }}
+     {{ Form::open(['route' => ['frases.update', $frase->id], 'method' => 'PUT']) }}
 
        <div class="row">
        	<div class="col-6">

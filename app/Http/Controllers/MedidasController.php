@@ -38,7 +38,7 @@ class MedidasController extends Controller
 
         flash("Felicidades has registrado con éxito la medida: ". $medida->nombre_medida)->success();
 
-        return redirect()->route('admin.medidas.index');
+        return redirect()->route('medidas.index');
 
     }
 
@@ -58,7 +58,7 @@ class MedidasController extends Controller
 
          flash("La medida se editó con éxito")->warning();
 
-         return redirect()->route('admin.medidas.index');
+         return redirect()->route('medidas.index');
 
     }
 
@@ -68,6 +68,6 @@ class MedidasController extends Controller
       $medida->delete();
 
       flash('La medida ' . $medida->nombre_medida . ' se elimino exitosamente')->warning();
-      return redirect()->route('admin.medidas.index');
+      return redirect()->route('medidas.index');
     }
 }

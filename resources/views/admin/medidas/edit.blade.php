@@ -4,12 +4,12 @@
 
 @section('content')
     
-     {!! Form::open(['route' => ['admin.medidas.update', $medida->id], 'method' => 'PUT']) !!}
+     {{ Form::open(['route' => ['medidas.update', $medida->id], 'method' => 'PUT']) }}
 
      <div class="form-group">
 
-       {!! Form::label('nombre_medida', 'Nombre de medida') !!}
-       {!! Form::text('nombre_medida', $medida->nombre_medida, ['class' => 'form-control', 'placeholder' => 'Nombre de la medida', 'required']) !!}
+       {{ Form::label('nombre_medida', 'Nombre de medida') }}
+       {{ Form::text('nombre_medida', $medida->nombre_medida, ['class' => 'form-control', 'placeholder' => 'Nombre de la medida', 'required']) }}
      	
      </div>
 
@@ -17,6 +17,6 @@
      	{!! Form::submit('GUARDAR CAMBIOS', ['class' => 'btn btn-primary']) !!}
      </div>
 
-     {!! form::close() !!}
+     {{ form::close() }}
 
 @stop

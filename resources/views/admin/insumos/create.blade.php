@@ -5,23 +5,23 @@
 @section('content')
 
     
-   {!! Form::open(['route' => 'admin.insumos.store', 'method' => 'POST']) !!}    
+   {{ Form::open(['route' => 'insumos.store', 'method' => 'POST']) }}   
 
      <div class="form-group">
-        	{!! Form::label('nombre_insumo', 'Nombre de insumo') !!}
-        	{!! Form::text('nombre_insumo', null, ['class' => 'form-control', 'placeholder' => 'Nombre de insumo', 'required']) !!}
+        	{{ Form::label('nombre_insumo', 'Nombre de insumo') }}
+        	{{ Form::text('nombre_insumo', null, ['class' => 'form-control', 'placeholder' => 'Nombre de insumo', 'required']) }}
      </div>   
 
      <div class="form-group">
-     	{!! Form::label('id_medida', 'Selecciona una medida') !!}
-     	{!! Form::select('id_medida', $medidas, null, ['class' => 'form-control select-medida', 'placeholder' => 'Selecciona una medida', 'required']) !!}
+     	{{ Form::label('id_medida', 'Selecciona una medida') }}
+     	{{ Form::select('id_medida', $medidas, null, ['class' => 'form-control select-medida', 'placeholder' => 'Selecciona una medida', 'required']) }}
      </div>
 
      <div class="form-group">
-     	{!! Form::submit('Guardar insumo', ["class" => 'btn btn-primary']) !!}
+     	{{ Form::submit('Guardar insumo', ["class" => 'btn btn-primary']) }}
      </div>
 
-   {!! Form::close() !!}
+   {{ Form::close() }}
 
 @stop
 

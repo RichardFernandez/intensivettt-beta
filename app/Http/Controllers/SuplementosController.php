@@ -24,7 +24,7 @@ class SuplementosController extends Controller
 
     public function create()
     {
-    	$marcas = Suplementocategoria::orderBy('nombre_marca', 'ASC')->lists('nombre_marca', 'id');
+    	$marcas = Suplementocategoria::orderBy('nombre_marca', 'ASC')->pluck('nombre_marca', 'id');
     	return view('admin.suplementos.create')->with('marcas', $marcas); 
     }
 
@@ -45,7 +45,7 @@ class SuplementosController extends Controller
 
     	flash("Felicidades has registrado con éxito el suplemento: " . $suplemento->nombre_suplemento)->success();
 
-    	return redirect()->route('admin.suplementos.index');
+    	return redirect()->route('suplementos.index');
 
 
     }
@@ -54,7 +54,7 @@ class SuplementosController extends Controller
     {
     	$suplemento = Suplemento::find($id);
     	$suplemento->marca;
-    	$marcas = Suplementocategoria::orderBy('nombre_marca', 'ASC')->lists('nombre_marca', 'id');
+    	$marcas = Suplementocategoria::orderBy('nombre_marca', 'ASC')->pluck('nombre_marca', 'id');
     	return view('admin.suplementos.edit')->with('marcas', $marcas)->with('suplemento', $suplemento);
     }
 
@@ -65,7 +65,7 @@ class SuplementosController extends Controller
     	$suplemento->save();
 
     	flash("actualizaste con éxito el suplemento ".$suplemento->nombre_suplemento)->warning();
-   	    return redirect()->route("admin.suplementos.index");
+   	    return redirect()->route("suplementos.index");
     }
 
     public function destroy($id)
@@ -73,7 +73,7 @@ class SuplementosController extends Controller
     	$suplemento = Suplemento::find($id);
     	$suplemento->delete();
     	flash("Eliminaste con éxito el suplemento: ".$suplemento->nombre_suplemento)->warning();
-    	return redirect()->route("admin.suplementos.index");
+    	return redirect()->route("suplementos.index");
     }
 
 

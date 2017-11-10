@@ -4,19 +4,19 @@
 
 @section('content')
 
- {!! Form::open(['route' => 'admin.catvideos.store', 'method' => 'POST']) !!}
+ {{ Form::open(['route' => 'catvideos.store', 'method' => 'POST']) }}
      <div class="form-group">
 
-        {!! Form::label('nombre_categoria', 'Nombre de la categoría') !!}
-        {!! Form::text('nombre_categoria', null, ['class' => 'form-control', 'placeholder' => 'Nombre de la categoría', 'required']) !!}
+        {{ Form::label('nombre_categoria', 'Nombre de la categoría') }}
+        {{ Form::text('nombre_categoria', null, ['class' => 'form-control', 'placeholder' => 'Nombre de la categoría', 'required']) }}
      	
      </div>
 
      <div class="form-group">
 
-        {!! Form::submit('GUARDAR CATEGORíA', ['class' => 'btn btn-primary']) !!}
+        {{ Form::submit('GUARDAR CATEGORíA', ['class' => 'btn btn-primary']) }}
      	
      </div>
- {!! Form::close() !!}
+ {{ Form::close() }}
 
 @stop

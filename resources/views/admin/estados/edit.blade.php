@@ -4,19 +4,19 @@
 
 @section('content')
     
-     {!! Form::open(['route' => ['admin.estados.update', $estado->id], 'method' => 'PUT']) !!}
+     {{ Form::open(['route' => ['estados.update', $estado->id], 'method' => 'PUT']) }}
 
      <div class="form-group">
 
-       {!! Form::label('nombre_estado', 'Nombre de medida') !!}
-       {!! Form::text('nombre_estado', $estado->nombre_estado, ['class' => 'form-control', 'placeholder' => 'Nombre del estado', 'required']) !!}
+       {{ Form::label('nombre_estado', 'Nombre de medida') }}
+       {{ Form::text('nombre_estado', $estado->nombre_estado, ['class' => 'form-control', 'placeholder' => 'Nombre del estado', 'required']) }}
       
      </div>
 
      <div class="form-group">
-      {!! Form::submit('GUARDAR CAMBIOS', ['class' => 'btn btn-primary']) !!}
+      {{ Form::submit('GUARDAR CAMBIOS', ['class' => 'btn btn-primary']) }}
      </div>
 
-     {!! form::close() !!}
+     {{ form::close() }}
 
 @stop

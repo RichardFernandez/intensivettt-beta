@@ -3,16 +3,16 @@
 
 @section('content')
 
-<a href="{{ route('admin.videos.create') }}" class="btn btn-info">Registrar nuevo video</a>
+<a href="{{ route('videos.create') }}" class="btn btn-info">Registrar nuevo video</a>
 
 <!--Buscador de videos-->
-{!! Form::open(['route' => 'admin.videos.index','method' => 'GET', 'class' => 'form-inline pull-right']) !!}
+{{ Form::open(['route' => 'videos.index','method' => 'GET', 'class' => 'form-inline pull-right']) }}
    <div class="input-group">
-      {!! Form::text('nombre_insumo', null, ['class' => 'form-control mr-sm-2', 'placeholder' => 'Buscar video....']) !!}
+      {{ Form::text('nombre_insumo', null, ['class' => 'form-control mr-sm-2', 'placeholder' => 'Buscar video....']) }}
       <button class="btn btn-info my-2 my-sm-0" type="submit">BUSCAR</button>
    	
    </div>
-{!! Form::close() !!}
+{{ Form::close() }}
 <hr>
 
      <!-- A partir de aqui empieza el despligue de los datos capturados -->
@@ -35,12 +35,12 @@
                  <td>{{ $video->nombre_video }}</td>
                  <td>{{ $video->url_video }}</td>
                  <td>{{ $video->categoria->nombre_categoria }}</td>
-                 <td> <a href="{{ route('admin.videos.edit', $video->id) }}" class="btn btn-warning"><span><i class="fa fa-pencil"></i></span></a></td>
-                 <td><a href="{{ route('admin.videos.destroy', $video->id) }}" onclick="return confirm('Seguro que deseas eliminar este registro?')" class="btn btn-danger"><span><i class="fa fa-times"></i></span></a></td>
+                 <td> <a href="{{ route('videos.edit', $video->id) }}" class="btn btn-warning"><span><i class="fa fa-pencil"></i></span></a></td>
+                 <td><a href="{{ route('videos.destroy', $video->id) }}" onclick="return confirm('Seguro que deseas eliminar este registro?')" class="btn btn-danger"><span><i class="fa fa-times"></i></span></a></td>
              </tr>
          @endforeach 
          </tbody>
      </table>
-     {!! $videos->render() !!}
+     {{ $videos->render() }}
 
 @stop

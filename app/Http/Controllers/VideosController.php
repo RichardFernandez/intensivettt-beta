@@ -22,7 +22,7 @@ class VideosController extends Controller
 	}
 
 	public function create(){
-		$categorias = Videoscategoria::orderBy('nombre_categoria', 'ASC')->lists('nombre_categoria', 'id');
+		$categorias = Videoscategoria::orderBy('nombre_categoria', 'ASC')->pluck('nombre_categoria', 'id');
 		return view('admin.videos.create')->with('categorias', $categorias);
 	}
 
@@ -33,14 +33,14 @@ class VideosController extends Controller
 
 		flash("Felicidades has registrado con éxito el video: ". $video->nombre_video)->success();
 
-		return redirect()->route('admin.videos.index');
+		return redirect()->route('videos.index');
 	}
 
    public function edit($id)
    {
    	   $video = Video::find($id);
    	   $video->categoria;
-   	   $categorias = Videoscategoria::orderBy('nombre_categoria', 'ASC')->lists('nombre_categoria', 'id');
+   	   $categorias = Videoscategoria::orderBy('nombre_categoria', 'ASC')->pluck('nombre_categoria', 'id');
        return view('admin.videos.edit')->with('categorias', $categorias)->with('video', $video);
    }
 
@@ -50,7 +50,7 @@ class VideosController extends Controller
    	  $video->fill($request->all());
    	  $video->save();
    	  flash("actualizaste con éxito el video ".$video->nombre_video)->warning();
-   	  return redirect()->route("admin.videos.index");
+   	  return redirect()->route("videos.index");
    }
    
    public function destroy($id)
@@ -58,7 +58,7 @@ class VideosController extends Controller
    	$video =  Video::find($id);
    	$video->delete();
    	flash("Eliminaste con éxito el video: ".$video->nombre_video)->warning();
-   	return redirect()->route("admin.videos.index");
+   	return redirect()->route("videos.index");
    }
     
 }

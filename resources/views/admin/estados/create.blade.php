@@ -4,19 +4,19 @@
 
 @section('content')
 
-     {!! Form::open(['route' => 'admin.estados.store', 'method' => 'POST']) !!}
+     {{ Form::open(['route' => 'estados.store', 'method' => 'POST']) }}
 
      <div class="form-group">
 
-       {!! Form::label('nombre_estado', 'Nombre de estado') !!}
-       {!! Form::text('nombre_estado', null, ['class' => 'form-control', 'placeholder' => 'Nombre del estado', 'required']) !!}
+       {{ Form::label('nombre_estado', 'Nombre de estado') }}
+       {{ Form::text('nombre_estado', null, ['class' => 'form-control', 'placeholder' => 'Nombre del estado', 'required']) }}
      	
      </div>
 
      <div class="form-group">
-     	{!! Form::submit('GUARDAR ESTADO', ['class' => 'btn btn-primary']) !!}
+     	{{ Form::submit('GUARDAR ESTADO', ['class' => 'btn btn-primary']) }}
      </div>
 
-     {!! form::close() !!}
+     {{ form::close() }}
 
 @stop

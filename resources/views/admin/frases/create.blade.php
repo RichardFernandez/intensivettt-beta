@@ -5,7 +5,7 @@
  
    <div class="form-frases-container">
 
-      {{ Form::open(['route' => 'admin.frases.store', 'method' => 'POST']) }}
+      {{ Form::open(['route' => 'frases.store', 'method' => 'POST']) }}
 
         <div class="row">
         	<div class="col-6">

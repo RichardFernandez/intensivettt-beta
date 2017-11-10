@@ -23,7 +23,7 @@ class InsumosController extends Controller
 
     public function create()
     {
-    	$medidas = Medida::orderBy('nombre_medida', 'ASC')->lists('nombre_medida', 'id');
+    	$medidas = Medida::orderBy('nombre_medida', 'ASC')->pluck('nombre_medida', 'id');
     	return view('admin.insumos.create')->with('medidas', $medidas);
     }
 
@@ -34,14 +34,14 @@ class InsumosController extends Controller
 
     	flash("Felicidades has registrado con éxito el insumo: ". $insumo->nombre_insumo)->success();
 
-         return redirect()->route('admin.insumos.index');
+         return redirect()->route('insumos.index');
     }
 
     public function edit($id)
     {
       $insumo = Insumo::find($id);
       $insumo->medida;
-      $medidas = Medida::orderBy('nombre_medida', 'ASC')->lists('nombre_medida', 'id');
+      $medidas = Medida::orderBy('nombre_medida', 'ASC')->pluck('nombre_medida', 'id');
       return view('admin.insumos.edit')->with('medidas', $medidas)->with('insumo', $insumo); 
 
     }
@@ -52,7 +52,7 @@ class InsumosController extends Controller
        $insumo->fill($request->all());
        $insumo->save();
        flash("Actualizaste con éxito el insumo")->warning();
-       return redirect()->route('admin.insumos.index');
+       return redirect()->route('insumos.index');
     }
 
     public function destroy($id)
@@ -61,7 +61,7 @@ class InsumosController extends Controller
          $insumo = Insumo::find($id);
          $insumo->delete();
          flash("Eliminaste con éxito el insumo ". $insumo->nombre_insumo)->warning();
-         return redirect()->route('admin.insumos.index');
+         return redirect()->route('insumos.index');
 
     }
 }

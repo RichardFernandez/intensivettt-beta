@@ -34,7 +34,7 @@ class EstadosController extends Controller
 
     	flash("Felicidades has registrado con éxito el estado: " .$estado->nombre_estado)->success();
 
-    	return redirect()->route('admin.estados.index');
+    	return redirect()->route('estados.index');
     }
 
     /*Metodo para enviar la vista de edicion*/
@@ -54,7 +54,7 @@ class EstadosController extends Controller
     	$estado->save();
 
     	flash("Editaste con éxito el estado")->warning();
-        return redirect()->route('admin.estados.index');
+        return redirect()->route('estados.index');
     }
 
     public function destroy($id)
@@ -64,6 +64,6 @@ class EstadosController extends Controller
 
     	flash("El Estado fue eliminado")->warning();
 
-    	return redirect()->route('admin.estados.index');
+    	return redirect()->route('estados.index');
     }
 }

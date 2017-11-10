@@ -4,19 +4,19 @@
 
 @section('content')
      
-    <a href="{{route('admin.catsuplementos.create')}}" class="btn btn-info">Registrar nueva marca</a>
+    <a href="{{route('catsuplementos.create')}}" class="btn btn-info">Registrar nueva marca</a>
 
      <!--Buscador de categorias-->
 
-        {!! Form::open(['route' => 'admin.catsuplementos.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) !!}
+        {{ Form::open(['route' => 'catsuplementos.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) }}
 
            <div class="input-group">
                
-               {!! Form::text('nombre_marca', null, ['class' => 'form-control mr-sm-2', 'placeholder' => 'Buscar Categoria....']) !!}
+               {{ Form::text('nombre_marca', null, ['class' => 'form-control mr-sm-2', 'placeholder' => 'Buscar Categoria....']) }}
                <button class="btn btn-info my-2 my-sm-0" type="submit">BUSCAR</button>
            </div>
 
-        {!! Form::close() !!}
+        {{ Form::close() }}
         <hr>
 
      <!-- A partir de aqui empieza el despligue de los datos capturados -->
@@ -37,11 +37,11 @@
                  <td>{{ $categoria->id }}</td>
                  <td>{{ $categoria->nombre_marca }}</td>
                  <td><img src="{{ '/images/catsuplementos/'.$categoria->imagen }}" width="50"></td>
-                 <td> <a href="{{ route('admin.catsuplementos.edit', $categoria->id) }}" class="btn btn-warning"><span ><i class="fa fa-pencil"></i></span></a></td>
-                 <td><a href="{{ route('admin.catsuplementos.destroy', $categoria->id) }}" onclick="return confirm('Seguro que deseas eliminar este registro?')" class="btn btn-danger"><span><i class="fa fa-times"></i></span></a></td>
+                 <td> <a href="{{ route('catsuplementos.edit', $categoria->id) }}" class="btn btn-warning"><span ><i class="fa fa-pencil"></i></span></a></td>
+                 <td><a href="{{ route('catsuplementos.destroy', $categoria->id) }}" onclick="return confirm('Seguro que deseas eliminar este registro?')" class="btn btn-danger"><span><i class="fa fa-times"></i></span></a></td>
              </tr>
          @endforeach 
          </tbody>
      </table>
-     {!! $categorias->render() !!}
+     {{ $categorias->render() }}
 @stop

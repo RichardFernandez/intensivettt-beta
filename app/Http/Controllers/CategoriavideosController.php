@@ -31,8 +31,9 @@ class CategoriavideosController extends Controller
 
     	flash("Felicidades has registrado con éxito la categoría: " . $categoria->nombre_categoria)->success();
 
-    	return redirect()->route('admin.catvideos.index');
+    	return redirect()->route('catvideos.index');
     }
+
 
     /*Metodo para enviar a la vista de edicion de un registro en especifico*/
 
@@ -51,7 +52,7 @@ class CategoriavideosController extends Controller
          $categoria->save();
 
          flash("Editaste con éxito la categoria de video")->warning();
-         return redirect()->route('admin.catvideos.index');
+         return redirect()->route('catvideos.index');
     }
 
     /*Metodo para eliminar una categoria de videos*/
@@ -62,6 +63,6 @@ class CategoriavideosController extends Controller
     	$categoria->delete();
 
     	flash("La categoria se elimino exitosamente")->warning();
-    	return redirect()->route('admin.catvideos.index');
+    	return redirect()->route('catvideos.index');
     }
 }

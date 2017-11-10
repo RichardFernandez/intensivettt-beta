@@ -16,23 +16,23 @@
               <a href="" class="nav-link">ENTRENADORES</a>
             </li>
             <li>
-              <a href="{{route('admin.empleados.index')}}" class="nav-link">PERSONAL</a>
+              <a href="{{route('empleados.index')}}" class="nav-link">PERSONAL</a>
             </li>
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CATALOGOS</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-                <a class="dropdown-item" href="{{route('admin.estados.index')}}">Estados de la República</a>
+                <a class="dropdown-item" href="{{route('estados.index')}}">Estados de la República</a>
                 {{-- <li role="separator" class="divider"></li> --}}
-                <a class="dropdown-item" href="{{route('admin.medidas.index')}}">Medidas</a>
-                <a class="dropdown-item" href="{{route('admin.insumos.index')}}">Insumos</a>
-                <a class="dropdown-item" href="{{route('admin.recetas.index')}}">Recetas</a>
+                <a class="dropdown-item" href="{{route('medidas.index')}}">Medidas</a>
+                <a class="dropdown-item" href="{{route('insumos.index')}}">Insumos</a>
+                <a class="dropdown-item" href="{{route('recetas.index')}}">Recetas</a>
                 {{-- <li role="separator" class="divider"></li> --}}
-                <a class="dropdown-item" href="{{route('admin.catvideos.index')}}">Categorias videos</a>
-                <a class="dropdown-item" href="{{route('admin.videos.index')}}">Videos</a>
+                <a class="dropdown-item" href="{{route('catvideos.index')}}">Categorias videos</a>
+                <a class="dropdown-item" href="{{route('videos.index')}}">Videos</a>
                 {{-- <li role="separator" class="divider"></li> --}}
-                <a class="dropdown-item" href="{{ route('admin.catsuplementos.index') }}">Marcas de suplementos</a>
-                <a class="dropdown-item" href="{{ route('admin.suplementos.index') }}">Suplementos</a>
-                <a class="dropdown-item" href="{{ route('admin.frases.index') }}">Frases</a>
+                <a class="dropdown-item" href="{{ route('catsuplementos.index') }}">Marcas de suplementos</a>
+                <a class="dropdown-item" href="{{ route('suplementos.index') }}">Suplementos</a>
+                <a class="dropdown-item" href="{{ route('frases.index') }}">Frases</a>
               </div>
             </li>
       </ul>

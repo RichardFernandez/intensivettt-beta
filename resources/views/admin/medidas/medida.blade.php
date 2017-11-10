@@ -16,20 +16,20 @@
     </div>
     @endif
 
-     {!! Form::open(['route' => 'admin.medidas.store', 'method' => 'POST']) !!}
+     {!! Form::open(['route' => 'medidas.store', 'method' => 'POST']) !!}
 
      <div class="form-group">
        {{ csrf_field() }}
 
-       {!! Form::label('nombre_medida', 'Nombre de medida') !!}
-       {!! Form::text('nombre_medida', null, ['class' => 'form-control', 'placeholder' => 'Nombre de la medida', 'required']) !!}
+       {{ Form::label('nombre_medida', 'Nombre de medida') }}
+       {{ Form::text('nombre_medida', null, ['class' => 'form-control', 'placeholder' => 'Nombre de la medida', 'required']) }}
      	
      </div>
 
      <div class="form-group">
-     	{!! Form::submit('GUARDAR MEDIDA', ['class' => 'btn btn-primary']) !!}
+     	{{ Form::submit('GUARDAR MEDIDA', ['class' => 'btn btn-primary']) }}
      </div>
 
-     {!! form::close() !!}
+     {{ form::close() }}
 
 @stop

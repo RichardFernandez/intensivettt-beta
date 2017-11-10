@@ -42,7 +42,7 @@ class CatsuplementosController extends Controller
 
     	flash("Felicidades has registrado con éxito la categoría: " . $categoria->nombre_marca)->success();
 
-    	return redirect()->route('admin.catsuplementos.index');
+    	return redirect()->route('catsuplementos.index');
     }
 
     public function edit($id)
@@ -58,7 +58,7 @@ class CatsuplementosController extends Controller
     	$categoria->save();
        
         flash("Editaste con éxito la categoria")->warning();
-        return redirect()->route('admin.catsuplementos.index');
+        return redirect()->route('catsuplementos.index');
     }
 
     public function destroy($id)
@@ -67,6 +67,6 @@ class CatsuplementosController extends Controller
     	$categoria->delete();
 
     	flash("La categoria se elimino exitosamente")->warning();
-    	return redirect()->route('admin.catsuplementos.index');
+    	return redirect()->route('catsuplementos.index');
     }
 }

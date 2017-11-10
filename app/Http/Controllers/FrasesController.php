@@ -29,7 +29,7 @@ class FrasesController extends Controller
     	$frase->save();
 
     	flash("Felicidades capturaste con éxito la frase ")->success();
-    	return redirect()->route('admin.frases.index');
+    	return redirect()->route('frases.index');
 
     }
 
@@ -48,7 +48,7 @@ class FrasesController extends Controller
     	$frase->save();
 
     	flash("Editaste con éxito la frase")->warning();
-    	return redirect()->route('admin.frases.index');
+    	return redirect()->route('frases.index');
 
     }
 
@@ -59,6 +59,6 @@ class FrasesController extends Controller
 
     	flash("La frase se elimino con éxito")->warning();
 
-    	return redirect()->route('admin.frases.index');
+    	return redirect()->route('frases.index');
     }
 }
